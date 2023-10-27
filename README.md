@@ -1,4 +1,4 @@
-# WindowsADinstall for Home Labs
+# Windows Active Directory installation process for Home Labs
 A guide to make installing the AD environment on Windows Server as easy as possible.
 
 The main purpose of the project is to facilitate to anyone that needs to build an homelab with Active Directory implementation.
