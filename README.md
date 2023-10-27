@@ -15,6 +15,16 @@ The virtual machine configurations are:
 
 OBS: The reason for the NAT adapter choice was not on purpose as you can also use an Bridge adapter to establish internet access, but basically there is a WAN connection and a LAN connection, the chosen network adapter for external access can be configured to establish connection outside the domain with NAT feature, it will be the last topic covered here.
 
+## Why you need an AD domain home lab
+
+The Microsoft Windows Active Directory work as a database manager which contains all the actives used in the organization, Servers, Routers and even Users. Each element stored is treated as a object, to organize this objects we have Organizational Units, think them as files in a directory and as the permissions in this directory, the Group Policy is applied on them but these policies are not applied to Containers, these units grouped are organized in domains, those domain when grouped turn into a tree, the tree establish between the domains a trust relationship so they can share resources among them.
+
+The Forest is an up level of hierarchy as it group many trees, sharing a directory schema and the resources in a trust relationship.
+
+Take as example the company SENTINEL, we have in this company the tree "yellowsentinel.com" which has also other domains like "hr.yellowsentinel.com", "it.yellowsentinel.com" and sharing among them a trust relationship, but this actual corporation is in Fortaleza-Ceará, but now the company is starting to grow an need another builing in Hong Kong, now our structure is the forest SENTINEL and then another tree call "bluesentinel.com" and others domains like "hr.bluesentinel.com", "it.bluesentinel.com" and sharing among them a trust relationship, the forest now has a only directory schema for all the domains.
+
+Many attacks like Kerberoasting, Privilege escalation, can occur with bad active directory implementation so the best way is to get your hands dirty and analyse the Indicators Of Compromise, Logs and also Processes, wait for others implementations.
+
 ## Installation Process
 
 With the ISO inserted on the VM, the installation process starts.
